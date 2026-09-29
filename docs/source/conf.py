@@ -1,35 +1,61 @@
 # Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Project information
+# -- Project information -----------------------------------------------------
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = "ENIGMA-PD fMRI Normative Modelling"
+copyright = "2026, Tim van Balkom - Amsterdam UMC"
+author = "Tim van Balkom - Amsterdam UMC"
 
-release = '0.1'
-version = '0.1.0'
+import subprocess
 
-# -- General configuration
+try:
+    release = subprocess.check_output(
+        ["git", "describe", "--tags", "--abbrev=0"], text=True
+    ).strip().lstrip("v")
+except Exception:
+    release = "v1.0.6"
+
+version = release
+
+def replace_release_placeholder(app, docname, source):
+    source[0] = source[0].replace("{{RELEASE_TAG}}", release)
+
+
+def setup(app):
+    app.connect("source-read", replace_release_placeholder)
+
+# -- General configuration ----------------------------------------------------
 
 extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
+    "myst_parser",
+    "sphinx_design",
+    "sphinx_substitution_extensions",
+    "sphinx.ext.todo",
 ]
 
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
 }
-intersphinx_disabled_domains = ['std']
 
-templates_path = ['_templates']
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+]
 
-# -- Options for HTML output
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-html_theme = 'sphinx_rtd_theme'
+# -- Options for HTML output ---------------------------------------------------
 
-# -- Options for EPUB output
-epub_show_urls = 'footnote'
+html_theme = "sphinx_rtd_theme"
+html_static_path = ["_static"]
+html_theme_options = {
+    "collapse_navigation": False,
+    "navigation_depth": 3,
+}
+
+todo_include_todos = True

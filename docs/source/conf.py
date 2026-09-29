@@ -34,6 +34,7 @@ extensions = [
     "sphinx_design",
     "sphinx_substitution_extensions",
     "sphinx.ext.todo",
+    "sphinx_new_tab_link",
 ]
 
 source_suffix = {

@@ -34,7 +34,6 @@ extensions = [
     "sphinx_design",
     "sphinx_substitution_extensions",
     "sphinx.ext.todo",
-    "sphinx_new_tab_link",
 ]
 
 source_suffix = {
@@ -58,5 +57,6 @@ html_theme_options = {
     "collapse_navigation": False,
     "navigation_depth": 3,
 }
+html_js_files = ["new_tab_links.js"]
 
 todo_include_todos = True

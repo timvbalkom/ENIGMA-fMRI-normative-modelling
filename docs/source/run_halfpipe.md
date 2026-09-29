@@ -75,7 +75,7 @@ Again, use the five denoising strategies that are outlined in [the HALFpipe manu
 ### Feature overview
 In the end, the `Features` tab should have ten fields: five `Seed-based connectivity` fields, and five `Atlas-based Connectivity` fields:
 
-```{image} ../../assets/screenshots/features.png
+```{image} /screenshots/features.png
 :alt: List of HALFpipe features
 :width: 100px
 ```

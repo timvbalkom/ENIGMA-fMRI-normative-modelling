@@ -50,7 +50,7 @@ For the seed images, use the **supplied seed images** (in your `seed_regions` fo
 A list of six seeds should be selectable:
 ```{image} /screenshots/seed_regions.png
 :alt: List of atlases
-:width: 400px
+:width: 200px
 ```
 
 Use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines):
@@ -68,7 +68,7 @@ For the atlas images use the **supplied atlas images** (in your atlases folder) 
 A list of two atlases should be selectable:
 ```{image} /screenshots/atlases.png
 :alt: List of atlases
-:width: 700px
+:width: 350px
 ```
 
 Again, use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines-1):
@@ -83,7 +83,7 @@ In the end, the `Features` tab should have ten fields: five `Seed-based connecti
 
 ```{image} /screenshots/features.png
 :alt: List of HALFpipe features
-:width: 300px
+:width: 200px
 ```
 
 ## Group level models

@@ -2,8 +2,8 @@
 ## For the ENIGMA-PD fMRI normative modelling project
 
 For questions, feel free to contact us!
-- PI: [Tim van Balkom](t.vanbalkom@amsterdamumc.nl)
-- PhD candidate: [Chahd el Fassi](c.elfassi@amsterdamumc.nl)
+- PI: [Tim van Balkom](mailto:t.vanbalkom@amsterdamumc.nl)
+- PhD candidate: [Chahd el Fassi](mailto:c.elfassi@amsterdamumc.nl)
 
 An outline of the secondary proposal is published [here](https://enigma-infra.github.io/ENIGMA-PD/projects/ongoing/normative_modelling/).
 

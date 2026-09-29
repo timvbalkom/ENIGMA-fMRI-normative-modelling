@@ -6,6 +6,7 @@ For questions, feel free to contact us!
 - PhD candidate: [Chahd el Fassi](c.elfassi@amsterdamumc.nl)
 
 An outline of the secondary proposal is published [here](https://enigma-infra.github.io/ENIGMA-PD/projects/ongoing/normative_modelling/).
+
 Please also check out our project page on the ENIGMA-PD website [here](https://enigma-infra.github.io/ENIGMA-PD/projects/ongoing/normative_modelling/)!
 
 

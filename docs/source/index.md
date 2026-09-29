@@ -23,20 +23,7 @@ This project is under active development.
 :maxdepth: 4
 :caption: Contents
 
-Manual
-   Installation
-   Download prerequisite atlas and seed images
-   Prepare your data
-   Prepare and run HALFpipe processing using the HALFpipe GUI
-      Launch HALFpipe
-      Pipeline settings
-      Features
-         Seed-based connectivity
-         Atlas-based connectivity matrices
-      Group-level models
-      Check and run
-Finished?
-   Quality control
-   Ready to share your data?
-Acknowledgment
+manual
+finished
+acknowledgment
 ```

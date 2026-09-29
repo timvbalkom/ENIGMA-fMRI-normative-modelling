@@ -48,7 +48,10 @@ For the seed images, use the **supplied seed images** (in your `seed_regions` fo
 - `NBM_R.nii.gz`, enter with label `NbM_R`
 - `NBM_Bilateral.nii.gz`, enter with label `NbM`
 A list of six seeds should be selectable:
-<img src="{{ site.baseurl }}/assets/screenshots/seed_regions.png" alt="List of HALFpipe seed regions" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 20px 0;">
+```{image} /screenshots/seed_regions.png
+:alt: List of atlases
+:width: 400px
+```
 
 Use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines):
 1)	aCompCor
@@ -63,7 +66,10 @@ For the atlas images use the **supplied atlas images** (in your atlases folder) 
 - `atlas-Schaefer2018Combined_dseg.nii.gz`, enter with label `Schaefer2018Combined`
 - `atlas-Schaefer400P7N-MSA_dseg.nii.gz`, enter with label `Schaefer400P7NMSAS3`
 A list of two atlases should be selectable:
-<img src="{{ site.baseurl }}/assets/screenshots/atlases.png" alt="List of HALFpipe atlases" style="width: 100%; max-width: 700px; border-radius: 8px; margin: 20px 0;">
+```{image} /screenshots/atlases.png
+:alt: List of atlases
+:width: 700px
+```
 
 Again, use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines-1):
 1)	aCompCor
@@ -77,7 +83,7 @@ In the end, the `Features` tab should have ten fields: five `Seed-based connecti
 
 ```{image} /screenshots/features.png
 :alt: List of HALFpipe features
-:width: 100px
+:width: 300px
 ```
 
 ## Group level models

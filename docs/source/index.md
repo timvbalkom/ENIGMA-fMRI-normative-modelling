@@ -25,7 +25,7 @@ The preprocessing pipeline is for the most part following standard procedures of
 
 
 ```{toctree}
-:maxdepth: 3
+:maxdepth: 2
 :caption: Contents
 
 installation
@@ -33,5 +33,6 @@ prerequisites
 data_prep
 run_halfpipe
 finished
+faq
 acknowledgment
 ```

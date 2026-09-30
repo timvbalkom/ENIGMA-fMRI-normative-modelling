@@ -93,5 +93,5 @@ In the end, the `Features` tab should have ten fields: five `Seed-based connecti
 Under `Check and run`, a json file should be visible that looks like [this example spec.json](https://surfdrive.surf.nl/s/D7rMyMqqDpsTGxJ).
 
 ```{note}
-Note that when running HALFpipe on an HPC, HALFpipe will produce files to submit jobs on the cluster, like sbatch scripts (`submit.sge.sh`, `submit.slurm.sh`, `submit.torque.sh`). Please note that some slurn settings (e.g., `time`, `memory`) should be adapted and some settings should be added, dependent on the HPC you're working on.
+Note that when running HALFpipe on an HPC, HALFpipe will produce files to submit jobs on the cluster, like sbatch scripts (`submit.sge.sh`, `submit.slurm.sh`, `submit.torque.sh`). Please note that some slurm settings (e.g., `time`, `memory`) should be adapted and some settings should be added, dependent on the HPC you're working on.
 ```

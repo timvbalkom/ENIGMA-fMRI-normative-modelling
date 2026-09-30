@@ -20,7 +20,9 @@ Instructions will follow soon&trade;!
 
 ::::
 
-For more information on the installation of HALFpipe, please refer to https://fmri.science/halfpipe/installation.html. 
+For more information on the installation of HALFpipe, please refer to [the HALFpipe installation documentation](https://fmri.science/halfpipe/installation.html).
+
+You can find information on how to install Apptainer/Singularity here as well. 
 
 ```{note}
 Note that you'll also need a FreeSurfer license for this processing pipeline. Most ENIGMA-PD sites will have one; you can request one [here](https://surfer.nmr.mgh.harvard.edu/registration.html).

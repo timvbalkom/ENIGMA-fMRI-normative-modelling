@@ -6,7 +6,7 @@ We’re using a new version of HALFpipe that deals with bugs essential for resti
 
 :::{tab-item} Apptainer/Singularity direct download
 ```bash
-wget https://surfdrive.surf.nl/s/ikDotZQx7YHJLdm/download
+wget --content-disposition https://surfdrive.surf.nl/s/ikDotZQx7YHJLdm/download
 ```
 :::
 

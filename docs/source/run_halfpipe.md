@@ -47,13 +47,16 @@ For the seed images, use the **supplied seed images** (in your `seed_regions` fo
 - `NBM_L.nii.gz`, enter with label `NbM_L`
 - `NBM_R.nii.gz`, enter with label `NbM_R`
 - `NBM_Bilateral.nii.gz`, enter with label `NbM`
-A list of six seeds should be selectable:
+
+A list of six seeds should be selectable. Make sure to select all seeds:
 ```{image} /screenshots/seed_regions.png
 :alt: List of atlases
 :width: 200px
 ```
 
-Use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines):
+Set `Minimum brain coverage` to `0.5`, and switch `low-pass temporal filter width` to `OFF`. 
+
+Use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines). **Importantly**, set smoothing to 4mm FWHM (this differs from the standard HALFpipe pipeline, and is related to the small volumes of the seed regions).
 1)	aCompCor
 2)	Motion parameters with scrubbing
 3)	Pipeline 2 + Global Signal (GSR)
@@ -65,11 +68,14 @@ Again, follow the instructions in [the HALFpipe manual](https://fmri.science/hal
 For the atlas images use the **supplied atlas images** (in your atlases folder) of the two different atlases:
 - `atlas-Schaefer2018Combined_dseg.nii.gz`, enter with label `Schaefer2018Combined`
 - `atlas-Schaefer400P7N-MSA_dseg.nii.gz`, enter with label `Schaefer400P7NMSAS3`
+
 A list of two atlases should be selectable:
 ```{image} /screenshots/atlases.png
 :alt: List of atlases
 :width: 350px
 ```
+
+Set `Minimum brain coverage` to `0.5`, and switch `low-pass temporal filter width` to `OFF`.
 
 Again, use the five denoising strategies that are outlined in [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#remove-confounds-for-5-pipelines-1):
 1)	aCompCor

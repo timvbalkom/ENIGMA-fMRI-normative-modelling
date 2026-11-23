@@ -37,7 +37,7 @@ Instructions will follow soon&trade;!
 Specify the directory where you want to run HALFpipe in. If there is no FreeSurfer license in this directory, HALFpipe will request a path where the FreeSurfer license can be found.
 ```{image} /screenshots/workdir.png
 :alt: Working directory
-:width: 400px
+:width: 500px
 ```
 
 ## Specify BIDS/data location
@@ -47,7 +47,7 @@ Next, specify the directory where the MRI data is stored (either BIDS or not).
 - If your data is **not in BIDS**, specify the pattern of folders and file names so that HALFpipe will recognize the MR images (for more detail, see [the HALFpipe manual](https://fmri.science/halfpipe/new_ui.html#specify-your-data-location)).
 ```{image} /screenshots/bids_format.png
 :alt: BIDS data directory
-:width: 400px
+:width: 500px
 ```
 
 ## Pipeline settings
@@ -60,7 +60,7 @@ Next, specify the directory where the MRI data is stored (either BIDS or not).
 Your screen should look like the image below:
 ```{image} /screenshots/settings.png
 :alt: General pipeline settings
-:width: 400px
+:width: 500px
 ```
 
 ## Features
@@ -69,16 +69,20 @@ For features, we’ll use **seed-based connectivity** and **atlas-based connecti
 ### Seed-based connectivity
 - Select **New**, **Seed-based-connectivity**, and for **Feature name** type `seedCorr1`.
 - Select **rest** under **Select tasks**. Your BOLD images should be recognized (*Found n BOLD image files for x session, y run, z subject*).
-- For the seed images, use the **supplied seed images** (in your `seed_regions` folder) of the substantia nigra and nucleus basalis of Meynert. Under **Seed images**, click **Add**. This will open a window where you can specify the path of your seed images. **Specify the path of one seed image** and accept. Change the file name (e.g., `SN_L.nii.gz`) to `{seed}.nii.gz`. All seed images in that directory should be recognized (six in total):
+- For the seed images, use the **supplied seed images** (in your `seed_regions` folder) of the substantia nigra and nucleus basalis of Meynert.
+  - Under **Seed images**, click **Add**. This will open a window where you can specify the path of your seed images.
+  - **Specify the path of one seed image** and accept.
+  - Change the file name (e.g., `SN_L.nii.gz`) to `{seed}.nii.gz`.
+- All seed images in that directory should be recognized (six in total):
 ```{image} /screenshots/seed_images.png
 :alt: Specify seed images
-:width: 400px
+:width: 500px
 ```
 
 - A list of six seeds should now be selectable. Make sure to select all seeds:
 ```{image} /screenshots/seed_overview.png
 :alt: SBC overview
-:width: 400px
+:width: 500px
 ```
 
 - Set `Minimum brain coverage` to `0.5`.
@@ -87,39 +91,44 @@ For features, we’ll use **seed-based connectivity** and **atlas-based connecti
 - Under **Remove confounds** tick `aCompCor`.
 ```{image} /screenshots/seed_settings.png
 :alt: SBC settings
-:width: 400px
+:width: 500px
 ```
 
 We've finished the settings for the first feature. However, we'll use five denoising strategies (in line with HALFpipe best practices). To copy all settings to a new feature, click **Duplicate** in the left navigation bar (located below the New button). This will create a new panel for seed-based connectivity, automatically pre-filled with the general settings. We'll duplicate this feature four times, and **only alter the Remove counfounds settings**:
 - Duplicate `seedCorr1`, and Enter `seedCorr2` as feature name. Select the following confounds (Motion parameters with scrubbing):
 ```{image} /screenshots/seed_settings2.png
 :alt: SBC settings 2
-:width: 400px
+:width: 500px
 ```
 - Duplicate `seedCorr1`, and Enter `seedCorr3` as feature name. Select the following confounds (Pipeline 2 + Global Signal (GSR)):
 ```{image} /screenshots/seed_settings3.png
 :alt: SBC settings 3
-:width: 400px
+:width: 500px
 ```
 - Duplicate `seedCorr1`, and Enter `seedCorr4` as feature name. Select the following confounds (Motion parameters):
 ```{image} /screenshots/seed_settings4.png
 :alt: SBC settings 4
-:width: 400px
+:width: 500px
 ```
 - Duplicate `seedCorr1`, and Enter `seedCorr5` as feature name. Select the following confounds (Pipeline 4 + Global Signal (GSR)):
 ```{image} /screenshots/seed_settings5.png
 :alt: SBC settings 5
-:width: 400px
+:width: 500px
 ```
 
 
 ### Atlas-based connectivity matrices
 - Select **New**, **Atlas-based connectivity**, and for **Feature name** type `corrMatrix1`.
 - Select **rest** under **Select tasks**. Your BOLD images should be recognized (*Found n BOLD image files for x session, y run, z subject*).
-- For the atlas images, use the **supplied atlas images** (in your `atlases` folder) of the two different atlases: `atlas-Schaefer2018Combined_dseg.nii.gz` and `atlas-Schaefer400P7N-MSA_dseg.nii.gz`. Under **Atlas images**, click **Add**. This will open a window where you can specify the path of your seed images. **Specify the path of `atlas-Schaefer2018Combined_dseg.nii.gz`**, accept, and enter with label `Schaefer2018Combined`. For the second atlas, again click **Add**. This will open a window where you can specify the path of your seed images. Specify the path of `atlas-Schaefer400P7N-MSA_dseg.nii.gz`, accept, and enter with label `Schaefer400P7NMSAS3`. A list of two atlases should now be selectable. Make sure to select all atlases:
+- For the atlas images, use the **supplied atlas images** (in your `atlases` folder) of the two different atlases: `atlas-Schaefer2018Combined_dseg.nii.gz` and `atlas-Schaefer400P7N-MSA_dseg.nii.gz`.
+  - Under **Atlas images**, click **Add**. This will open a window where you can specify the path of your seed images.
+  - Specify the path of `atlas-Schaefer2018Combined_dseg.nii.gz`, accept, and enter with label `Schaefer2018Combined`.
+  - For the second atlas, again click **Add**. This will open a window where you can specify the path of your seed images.
+  - Specify the path of `atlas-Schaefer400P7N-MSA_dseg.nii.gz`, accept, and enter with label `Schaefer400P7NMSAS3`.
+- A list of two atlases should now be selectable. Make sure to select all atlases:
 ```{image} /screenshots/matrix_overview.png
 :alt: Specify atlas images
-:width: 400px
+:width: 500px
 ```
 
 - Set `Minimum atlas region coverage` to `0.5`.
@@ -128,29 +137,29 @@ We've finished the settings for the first feature. However, we'll use five denoi
 - Under **Remove confounds** tick `aCompCor`.
 ```{image} /screenshots/matrix_settings.png
 :alt: ABC settings
-:width: 400px
+:width: 500px
 ```
 
 We've finished the settings for the first feature. However, we'll use five denoising strategies (in line with HALFpipe best practices). To copy all settings to a new feature, click **Duplicate** in the left navigation bar (located below the New button). This will create a new panel for seed-based connectivity, automatically pre-filled with the general settings. We'll duplicate this feature four times, and **only alter the Remove counfounds settings**:
 - Duplicate `corrMatrix1`, and Enter `corrMatrix2` as feature name. Select the following confounds (Motion parameters with scrubbing):
 ```{image} /screenshots/matrix_settings2.png
 :alt: ABC settings 2
-:width: 400px
+:width: 500px
 ```
-- Duplicate `corrMatrix1`, and Enter `corrMatrix2` as feature name. Select the following confounds (Pipeline 2 + Global Signal (GSR)):
+- Duplicate `corrMatrix1`, and Enter `corrMatrix3` as feature name. Select the following confounds (Pipeline 2 + Global Signal (GSR)):
 ```{image} /screenshots/matrix_settings3.png
 :alt: ABC settings 3
-:width: 400px
+:width: 500px
 ```
-- Duplicate `corrMatrix1`, and Enter `corrMatrix3` as feature name. Select the following confounds (Motion parameters):
+- Duplicate `corrMatrix1`, and Enter `corrMatrix4` as feature name. Select the following confounds (Motion parameters):
 ```{image} /screenshots/matrix_settings4.png
 :alt: ABC settings 4
-:width: 400px
+:width: 500px
 ```
-- Duplicate `corrMatrix1`, and Enter `corrMatrix4` as feature name. Select the following confounds (Pipeline 4 + Global Signal (GSR)):
+- Duplicate `corrMatrix1`, and Enter `corrMatrix5` as feature name. Select the following confounds (Pipeline 4 + Global Signal (GSR)):
 ```{image} /screenshots/matrix_settings5.png
 :alt: ABC settings 5
-:width: 400px
+:width: 500px
 ```
 
 ### Feature overview
@@ -170,7 +179,7 @@ Under `Check and run`, a json file should be visible that looks like [this examp
 **Please make sure** that `some` intermediary files are saved. This setting is default, can be found under the `Check and run` tab, and will look like this:
 ```{image} /screenshots/keep_some2.png
 :alt: List of HALFpipe features
-:width: 800px
+:width: 600px
 ```
 
 When you're happy with the configuration, click **Save** (top right) and click **Generate HPC batch script** (if you're working on an HPC). This will produce bash scripts to submit your HALFpipe preprocessing as batch job.

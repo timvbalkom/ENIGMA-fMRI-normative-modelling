@@ -31,6 +31,7 @@ The preprocessing pipeline is for the most part following standard procedures of
 installation
 prerequisites
 data_prep
+prepare_spec
 run_halfpipe
 finished
 faq

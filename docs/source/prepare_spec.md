@@ -34,6 +34,10 @@ Instructions will follow soon&trade;!
 
 ## Specify working directory
 
+```{note}
+If you initiate HALFpipe using `apptainer run --contain --cleanenv --bind /:/ext halfpipe...`, you mount all folders to `/ext`. For this reason, you will need to start paths (e.g., working directory, BIDS directory, atlas/seed image paths) with `/ext/`, e.g., `/ext/data/HALFpipe/work`.
+```
+
 Specify the directory where you want to run HALFpipe in. If there is no FreeSurfer license in this directory, HALFpipe will request a path where the FreeSurfer license can be found.
 ```{image} /screenshots/workdir.png
 :alt: Working directory

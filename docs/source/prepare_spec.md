@@ -130,7 +130,7 @@ We've finished the settings for the first feature. However, we'll use five denoi
   - For the second atlas, again click **Add**. This will open a window where you can specify the path of your seed images.
   - Specify the path of `atlas-Schaefer400P7N-MSA_dseg.nii.gz`, accept, and enter with label `Schaefer400P7NMSAS3`.
 - A list of two atlases should now be selectable. Make sure to select all atlases:
-```{image} /screenshots/matrix_overview.png
+```{image} /screenshots/matrix_overview2.png
 :alt: Specify atlas images
 :width: 500px
 ```
